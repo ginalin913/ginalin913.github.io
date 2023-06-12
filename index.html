@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>科技式評量 - 作文平台</title>
+  <style>
+    /* CSS樣式 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    #instructions {
+      margin-bottom: 20px;
+    }
+
+    #topic {
+      margin-bottom: 20px;
+    }
+
+    #essayForm {
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #feedback {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>科技式評量 - 作文平台</h1>
+  <div id="instructions">
+    <h2>寫作說明</h2>
+    <p>0-2分:未掌握題幹要求而偏離主題</p>
+    <p>3-4分:尚能掌握題幹要求，依照題目要求發揮</p>
+    <p>5-6分:能掌握題幹要求緊扣題旨發揮</p>
+  </div>
+
+  <div id="topic">
+    <h2>作文主題</h2>
+    <p>主題：「我的夢想」</p>
+  </div>
+
+  <div id="essayForm">
+    <h2>作文上傳區</h2>
+    <form>
+      <input type="file" accept=".txt,.doc,.docx" id="essayFile">
+      <button type="submit" onclick="uploadEssay()">上傳作文</button>
+    </form>
+  </div>
+
+  <div id="feedback" style="display: none;">
+    <h2>評分與建議區</h2>
+    <p>作文評分結果與建議將顯示於此。</p>
+  </div>
+
+  <script>
+    // 上傳作文
+    function uploadEssay() {
+      // 取得上傳的檔案
+      var fileInput = document.getElementById('essayFile');
+      var file = fileInput.files[0];
+
+      // 執行上傳作業，並處理回應
+      // ...
+
+      // 顯示評分與建議區
+      document.getElementById('essayForm').style.display = 'none';
+      document.getElementById('feedback').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
